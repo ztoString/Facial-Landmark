@@ -14,22 +14,24 @@ Ubantu-18.04.1虚拟机下基于caffe和opencv实现人脸五个关键点检测
 >>>cnns.py  
 >>>level.py  
 >>>utils.py  
+
 >>data  
 >>>level1.py  
 >>>level2.py  
 >>>level3.py  
 >>>utils.py  
+
 >>test  
 >>>draw_landmarkfortest.py  
 
-记得：
+#### 记得：  
 1.下载数据集  
 2.制作hdf5数据源(每8000-10000个数据做一个hdf5数据源)  
 3.通过myprototxt脚本文件制作各关键点所需的deploy.prototxt、solver.prototxt、train.prototxt和train.sh文件  
 4.修改文件路径  
 
-### 注意：在numpy>1.11.0版本中，程序会报错：TypeError: slice indices must be integers or None or have an __index__ method   
-####因为numpy1.11.0以上版本不支持浮点数作为索引，需要对相应变量进行int()类型强制转换
+#### 注意：在numpy>1.11.0版本中，程序会报错：TypeError: slice indices must be integers or None or have an __index__ method   
+#### 因为numpy1.11.0以上版本不支持浮点数作为索引，需要对相应变量进行int()类型强制转换
 
 ### 中心思想：将人脸图像分3层level训练
 #### 1.全局 -- 眼睛和鼻子 -- 鼻子和嘴巴
@@ -37,7 +39,7 @@ Ubantu-18.04.1虚拟机下基于caffe和opencv实现人脸五个关键点检测
 #### 3.继续对每一个关键点生成0.11和0.12的padding，进行微调
 
 ### Level1：
-![Level1.jpg](https://github.com/ztoString/Facial-Landmark/raw/master/result-folder/level1-Aaron_Peirsol_0001.jpg)
+![Level1.jpg](https://github.com/ztoString/Facial-Landmark/raw/master/result-folder/level1-Aaron_Eckhart_0001.jpg.jpg)
 
 ### Level2：
 ![Level2.jpg](https://github.com/ztoString/Facial-Landmark/raw/master/result-folder/level1-Aaron_Peirsol_0001.jpg-level2-.jpg)
